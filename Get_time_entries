@@ -1,0 +1,13 @@
+import requests
+
+url = "https://api.harvestapp.com/v2/time_entries"
+
+payload={}
+headers = {
+  'Harvest-Account-Id': 'XXXXXXX',
+  'Authorization': 'XXXXX '
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
